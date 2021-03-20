@@ -1,2 +1,2 @@
-# LaavkaMastera
+# LavkaMastera
 Online Store
