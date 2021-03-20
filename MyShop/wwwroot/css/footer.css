@@ -1,0 +1,12 @@
+﻿footer {
+  border-top: 0.1em solid #F5E944;
+  padding-top: 3em;
+  padding-bottom: 3em; }
+  footer .contents a {
+    color: black; }
+
+.title hr {
+  height: .1em;
+  background-color: #F5E944;
+  opacity: 1;
+  margin-top: -.1em; }

@@ -1,0 +1,21 @@
+﻿$yellow: #F5E944;
+footer {
+    border-top: .1em solid $yellow;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    .contents {
+        a {
+            color: black;
+        }
+    }
+}
+
+.title {
+    hr {
+        height: .1em;
+        background-color: $yellow;
+        opacity: 1;
+        margin-top: -.1em;
+    }
+}

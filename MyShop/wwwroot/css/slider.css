@@ -1,0 +1,14 @@
+﻿
+.slider {
+    height: 35em;
+    margin: 1em 1em 1em 1em;
+    position: relative;
+}
+
+    .slider div {
+        position: absolute;
+        height: 35em;
+        width: 100%;
+        top: 0em;
+        left: 0em;
+    }

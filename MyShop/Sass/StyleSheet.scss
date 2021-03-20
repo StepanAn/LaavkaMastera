@@ -1,0 +1,77 @@
+﻿$yellow: #F5E944;
+
+:root {
+    --myborder-size: 0.5em;
+    --left-and-right-margin: .1em;
+}
+
+@mixin smshad() {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+@mixin alpha() {
+    color: #7e8086;
+    font-size: 90%;
+}
+
+body {
+    border: var(--myborder-size) solid $yellow;
+    min-height: 50em;
+    @include smshad();
+}
+
+header {
+    background-color: white;
+
+    img {
+        height: 3.5em;
+    }
+
+}
+.non{
+    margin: 10em 50% 10em auto;
+    width: 8em;
+    text-align: center;
+}
+.cart {
+    a{
+        color: black;
+        text-decoration:none;
+    }
+    .total-price{
+        float: left;
+    }
+    img {
+        height: 6em;
+        float: left;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: .8em 2em .8em 2em;
+
+        .left {
+            div {
+                float: right;
+                margin-left: .6em;
+
+                .price {
+                    @include alpha();
+                }
+
+                .desc {
+                    @include alpha();
+                }
+            }
+        }
+    }
+}
+.line {
+    border-top: .1em solid $yellow;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}

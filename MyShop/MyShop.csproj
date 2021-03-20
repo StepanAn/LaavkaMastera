@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\js\min.bundle\bundle.js" />
+    <Content Remove="wwwroot\js\min.bundle\bundle.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="bundleconfig.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\footer.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\min.bundle\bundle.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\min.bundle\bundle.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\min.bundle\bundle.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jQuery.Ajax.Unobtrusive" Version="2.0.20710" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataBase\DataBase.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\js\min.bundle\bundle.js" />
+    <None Include="wwwroot\js\min.bundle\bundle.min.js" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\.gitattributes" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\.gitignore" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\.vsts-pipelines\builds\ci-public.yml" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\build.cmd" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\build.msbuild" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\CODE-OF-CONDUCT.md" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\CONTRIBUTING.md" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\gulpfile.js" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\Microsoft.jQuery.Unobtrusive.Ajax.nuspec" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\README.md" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\run.ps1" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\src\jquery.unobtrusive-ajax.js" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive-main\version.props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\min.bundle\" />
+  </ItemGroup>
+
+</Project>

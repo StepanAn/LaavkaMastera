@@ -1,0 +1,10 @@
+﻿@{ ViewData["Title"] = "Удаление"; }
+<div>
+    <form asp-controller="Product" asp-action="Deletee" method="post" asp-route-id="@Model.Id">
+        <div class="form-group">
+            <input type="submit" class="btn btn-default" value="Удалить" />
+        </div>
+    </form>
+</div>
+<br />
+<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Обратно</a>

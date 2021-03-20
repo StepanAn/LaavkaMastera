@@ -1,0 +1,56 @@
+﻿@{ ViewData["Title"] = "Корзина"; }
+<div id="cart-content">
+@if (Model != null)
+{
+<div class="container-lg">
+    <div class="row">
+        <div class="cart col-sm-9">
+            @foreach (var item in Model)
+            {
+        <div class="item">
+            <div class="left">
+                <img src="@item.TovarInCart.Img" />
+                <div>
+                    <span class="user-name h3">@item.TovarInCart.Name</span><br />
+                    <span class="desc">@item.TovarInCart.ShortDesc</span><br />
+                    <span class="price">@item.TovarInCart.Price</span><br />
+                </div>
+            </div>
+            <div class="center h4">
+                <a asp-action="Edit" asp-route-tovarId="@item.TovarInCart.Id" asp-route-value="1" data-ajax="true" data-ajax-method="get" class="plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                </a>
+                <span class="amount">@item.Amount</span>
+                <a asp-action="Edit" asp-controller="Cart" asp-route-tovarId="@item.TovarInCart.Id" asp-route-value="-1" data-ajax="true" data-ajax-method="get" class="minus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="right h4">
+                <div class="total-price">@item.TotalPrice</div>
+                <a asp-action="Remove" asp-controller="Cart" asp-route-tovarId="@item.TovarInCart.Id" data-ajax="true" data-ajax-method="get" class="remove">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+            }
+        </div>
+        <div class="col-sm-3 d-flex flex-column align-items-center">
+            <div class="h4 my-2" id="all-price">@ViewBag.TotalPrice</div> 
+            <div>Товаров в корзине: <div id="all-amount">@ViewBag.Amount</div></div>
+        </div>
+    </div>
+</div>
+<script src="~/js/cart.js"></script>
+}
+else{
+
+
+<div class="h4 non">В вашей корзине нет товаров</div>
+}
+</div>

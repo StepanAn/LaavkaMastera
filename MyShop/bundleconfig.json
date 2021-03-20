@@ -1,0 +1,19 @@
+[
+  {
+    "outputFileName": "wwwroot/js/min.bundle/bundle.js",
+    "inputFiles": [
+      "wwwroot/js/comments.js",
+      "wwwroot/js/cart.js",
+      "wwwroot/js/slider.js",
+      "wwwroot/js/menu.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/min.bundle/bundle.css",
+    "inputFiles": [
+      "wwwroot/css/maincontent.css",
+      "wwwroot/css/header.css",
+      "wwwroot/css/slider.css"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+﻿@{ ViewData["Title"] = "Изменение продукта"; }
+<form method="post" asp-action="Editt" asp-controller="Product" asp-route-id="@Model.Id">
+    <label>Название</label>
+    <input type="text" name="Name" value="@Model.Name" /><br />
+    <label>Цена</label>
+    <input type="number" name="Price" value="@Model.Price" /><br />
+    <label>Путь к картинке</label>
+    <input type="text" name="Img" value="@Model.Img" /><br />
+    <label>Короткое описание</label>
+    <input type="text" name="ShortDesc" value="@Model.ShortDesc" /><br />
+    <label>Длинное описание</label>
+    <input type="text" name="LongDesc" value="@Model.LongDesc" /><br />
+    @await Component.InvokeAsync("MenuCategory", new { la = true })
+    <input type="submit" /><br />
+</form>

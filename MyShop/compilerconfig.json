@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/layout2.css",
+    "inputFile": "Sass/StyleSheet.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/footer.css",
+    "inputFile": "Sass/footer.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/details.css",
+    "inputFile": "Sass/details.scss"
+  }
+]

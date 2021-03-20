@@ -1,0 +1,66 @@
+﻿<footer class="container mt-5">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="d-flex justify-content-center flex-column align-items-center">
+                <div class="d-flex justify-content-center">
+                    <div class="title h5 nline">
+                        О нас
+                        <hr />
+                    </div>
+                </div>
+                <div>
+                    Пара строчек
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="d-flex justify-content-center flex-column align-items-center">
+                <div class="d-flex justify-content-center">
+                    <div class="title h5 nline">
+                        Наши товары
+                        <hr />
+                    </div>
+                </div>
+                <div class="contents">
+
+                    @foreach (var item in Static.Categories)
+                    {
+        <div>
+            <a asp-controller="Search" asp-action="Search" asp-route-id="@item.Id">
+                @item.CategoryName
+            </a>
+        </div>}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="d-flex justify-content-center flex-column align-items-center">
+                <div class="d-flex justify-content-center">
+                    <div class="title h5 nline">
+                        Контакты
+                        <hr />
+                    </div>
+                </div>
+
+                <div class="h6">
+                    <div>+79957784765</div>
+                    <div>anufr8319@gmail.com</div>
+                </div>
+                <div>
+                    <span>Напишите нам:</span>
+                    <textarea class="form-control"></textarea>
+                    <label for="name" class="form-label mt-1">Имя</label>
+                    <input type="text" id="name" class="form-control" />
+                    <input type="submit" class="btn btn-warning mt-2" value="Отправить" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <a asp-action="Login" asp-controller="Product">Войти</a>
+    @if(Static.IAdmin) 
+    {
+          <a asp-action="Create" asp-controller="Product">Новый товар</a>
+    }
+</footer>
+<script src="~/js/lines.js"></script>

@@ -1,0 +1,87 @@
+﻿:root {
+    --myborder-size: 2em;
+    --leftandright-margin: 0.6em;
+}
+
+.comment-contetnt {
+    display: inline-block;
+}
+
+.user-name {
+    font-size: 80%;
+}
+
+.avatar {
+    width: 3em;
+}
+
+.main-content {
+    border: var(--myborder-size) solid #E05A2A;
+    margin: 10em var(--leftandright-margin) 0em var(--leftandright-margin);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.product {
+    margin: 2em 0em 2em 0em;
+}
+
+    .product a {
+        text-decoration: none;
+        color: black;
+    }
+
+        .product a:hover {
+            color: black;
+        }
+
+.container-for-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 8em 1em 5em 1em;
+}
+
+.product-img img {
+    width: 10em;
+}
+
+p {
+    white-space: pre-line;
+}
+
+.content a {
+    text-decoration: none;
+    color: black;
+}
+
+    .content a:hover {
+        color: black;
+    }
+
+.product-name {
+    margin-bottom: 0.5em;
+}
+
+.comments {
+    border: var(--myborder-size) solid black;
+    margin: 10em var(--leftandright-margin) 0em var(--leftandright-margin);
+    min-height: 50em;
+}
+
+@media (max-width: 50em) {
+    :root {
+        --myborder-size: 0.5em;
+    }
+}
+
+@media(max-width: 30em) {
+    .container-for-product {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    :root {
+        --myborder-size: 0em;
+    }
+}
