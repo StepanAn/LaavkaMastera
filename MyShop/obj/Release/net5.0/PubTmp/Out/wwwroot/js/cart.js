@@ -1,44 +1,56 @@
-﻿$(function () {
+﻿'use strict';
+$(function () {
     $('.remove').click(function () {
-        var removeItem = $(this).parents('tr');
+        let removeItem = $(this).parents('.item');
+        let totalPriceTag = $(removeItem[0]).find('.total-price');
+        let amountTag = $(removeItem[0]).find('.amount');
+        let totalPrice = +$(totalPriceTag[0]).html();
+        let amount = +$(amountTag[0]).html();
+        editToolbar(-totalPrice, -amount);
         $(removeItem[0]).remove();
-        var idents = $('tbody').find('.ident');
-        for (var i = 0; i < idents.length; i++) {
-            $(idents[i]).html(i + 1);
-        }
+        chekAndRemoveCart();
     });
-    $('.plus').click(Plus);
-    $('.minus').click(Minus);
+    $('.plus').click(plus);
+    $('.minus').click(minus);
 });
-function Plus(/*i = 1*/) {
-    var amount = $(this).siblings('span');
-    var parent = $(this).parents('tr');
-    var priceTag = $(parent[0]).find('.price');
-    var totalPriceTag = $(parent[0]).find('.total-price');
-    var price = $(priceTag[0]).html();
-    var colvo = $(amount[0]).html();
-    /*if(i==1)*/
-    colvo++;
-    var totalPrice = price * colvo;
-    $(totalPriceTag[0]).html(totalPrice);
-    $(amount[0]).html(colvo);
+function plus() {
+    edit(this, 1);
+    chekAndRemoveCart();
 }
-function Minus() {
-    var amount = $(this).siblings('span');
-    var parent = $(this).parents('tr');
-    var priceTag = $(parent[0]).find('.price');
-    var totalPriceTag = $(parent[0]).find('.total-price');
-    var price = $(priceTag[0]).html();
-    var colvo = $(amount[0]).html();
-    colvo--;
-    if (colvo == 0) {
+function minus() {
+    edit(this, -1);
+    chekAndRemoveCart();
+}
+function edit(targetObject, changeValue) {
+    let amountTag = $(targetObject).siblings('span');
+    let parent = $(targetObject).parents('.item');
+    let priceTag = $(parent[0]).find('.price');
+    let totalPriceTag = $(parent[0]).find('.total-price');
+    let price = +$(priceTag[0]).html();
+    let amount = +$(amountTag[0]).html();
+    amount += changeValue;
+    if (amount == 0) {
         $(parent).remove();
-        var idents = $('tbody').find('.ident');
-        for (var i = 0; i < idents.length; i++) {
-            $(idents[i]).html(i + 1);
-        }
     }
-    var totalPrice = price * colvo;
+    let priceOffset = price * changeValue;
+    let totalPrice = price * amount;
+    editToolbar(priceOffset, changeValue);
     $(totalPriceTag[0]).html(totalPrice);
-    $(amount[0]).html(colvo);
+    $(amountTag[0]).html(amount);
+}
+function editToolbar(priceOffset, amountOffset) {
+    let allPrice = +$('#all-price').html();
+    let allAmount = +$('#all-amount').html();
+    allPrice += +priceOffset;
+    allAmount += +amountOffset;
+    $('#all-price').html(allPrice);
+    $('#all-amount').html(allAmount);
+
+}
+function chekAndRemoveCart() {
+    let allAmount = +$('#all-amount').html();
+    if (!allAmount) {
+        $('.container-lg').remove();
+        $('#cart-content').html('<div class="h4 non">В вашей корзине нет товаров</div>');
+    }
 }

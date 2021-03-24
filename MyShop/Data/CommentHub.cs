@@ -8,14 +8,15 @@ namespace MyShop
 {
     public class CommentHub : Hub
     {
-        private readonly IData db;
-        public CommentHub(IData context)
+        private readonly ApplicationContext db;
+        public CommentHub(ApplicationContext context)
         {
             db = context;
         }
         public async Task Send(Comment comment)
         {
-            db.Comments.AddAsync(comment);
+            db.Comments.Add(comment);
+            await db.SaveChangesAsync();
             CommentViewModel com = new()
             {
                 NameUser = comment.NameUser,

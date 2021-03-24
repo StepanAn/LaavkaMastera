@@ -13,6 +13,3 @@ C:\MyShop\DataBase\obj\Debug\net5.0\DataBase.csproj.CopyComplete
 C:\MyShop\DataBase\obj\Debug\net5.0\DataBase.dll
 C:\MyShop\DataBase\obj\Debug\net5.0\ref\DataBase.dll
 C:\MyShop\DataBase\obj\Debug\net5.0\DataBase.pdb
-C:\MyShop\DataBase\bin\Debug\net5.0\DataBase.runtimeconfig.json
-C:\MyShop\DataBase\bin\Debug\net5.0\DataBase.runtimeconfig.dev.json
-C:\MyShop\DataBase\obj\Debug\net5.0\DataBase.genruntimeconfig.cache

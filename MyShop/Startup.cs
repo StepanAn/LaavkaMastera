@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using DataBase;
-using MyShop.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace MyShop
 {
@@ -19,6 +19,11 @@ namespace MyShop
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // получаем строку подключения из файла конфигурации
+            string connection = Configuration.GetConnectionString("DefaultConnection");
+            // добавляем контекст MobileContext в качестве сервиса в приложение
+            services.AddDbContext<ApplicationContext>(options =>
+                options.UseSqlServer(connection));
             services.AddSignalR();
             services.AddDataBase();
             services.AddControllersWithViews();

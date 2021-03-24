@@ -1,27 +1,30 @@
 ﻿<div class="container-lg">
-    <div class="row">
-        <div class="col-sm-8 mx-2">
-            <img src="@Model.Img" height="500" />
-            <br />
-            <text>Цена:@Model.Price</text>
-            <br />
-            @Model.LongDesc
-            <br />
+    <div class="row justify-content-around">
+        <div class="col-sm-8 ms-2">
+            <img src="@Model.Img" class="product-picture" />
+            <p class="product-desc">
+               @Model.LongDesc
+            </p>
         </div>
-        <div class="col-sm-4">
-            <a asp-controller="Cart" asp-action="AddToCart" data-ajax="true" data-ajax-method="post" asp-route-id="@Model.Id">
+        <div class="col-sm-3 d-flex flex-column align-items-center info">
+            <div class="h4">
+                @Model.Name
+            </div>
+            <div class="h5">
+                @Model.Price.ToString("c")
+            </div>
+            <a asp-controller="Cart" asp-action="AddToCart" data-ajax="true" data-ajax-method="post" asp-route-id="@Model.Id" class="to-cart btn btn-warning">
                 В корзину
             </a>
             <br />
             @if (Static.IAdmin)
-             {
-                 <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.Id">
-                       Изменить
-                 </a><br />
-                 <a asp-controller="Product" asp-action="Delete" asp-route-id="@Model.Id">
-                            Удалить
-                 </a>
-             }
-        </div>
+            {
+             <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.Id">
+                  Изменить
+             </a><br />
+             <a asp-controller="Product" asp-action="Delete" asp-route-id="@Model.Id">
+                 Удалить
+             </a>}
+             </div>
     </div>
 </div>

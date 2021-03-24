@@ -1,4 +1,8 @@
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\MyShop.exe
+C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\details.css
+C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\details.min.css
+C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\footer.css
+C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\footer.min.css
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\header.css
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\layout2.css
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\layout2.min.css
@@ -7,11 +11,13 @@ C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\min.bundle\bundle.css
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\min.bundle\bundle.min.css
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\css\slider.css
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.ico
+C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\img\1111.jpeg
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\img\interior design — копия.png
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\img\interior design.png
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\img\noavatar92.png
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\js\cart.js
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\js\comments.js
+C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\js\lines.js
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\js\menu.js
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\js\microsoft\signalr\dist\browser\signalr.min.js
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\js\microsoft\signalr\dist\browser\signalr.min.js.map
@@ -37,29 +43,7 @@ C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\boo
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\LICENSE
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\.gitattributes
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\.gitignore
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\build.cmd
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\build.msbuild
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\CODE-OF-CONDUCT.md
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\CONTRIBUTING.md
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\gulpfile.js
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\LICENSE.txt
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\Microsoft.jQuery.Unobtrusive.Ajax.nuspec
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\package-lock.json
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\package.json
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\README.md
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\run.ps1
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\src\jquery.unobtrusive-ajax.js
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-ajax-unobtrusive-main\version.props
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation\dist\additional-methods.js
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation\LICENSE.md
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.js
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.js
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.map
@@ -70,7 +54,6 @@ C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\libman.json
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\js\min.bundle\bundle.js
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\wwwroot\js\min.bundle\bundle.min.js
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\MyShop.dll
-C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\MyShop.deps.json
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\MyShop.runtimeconfig.json
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\MyShop.pdb
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
@@ -85,6 +68,7 @@ C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Logging.d
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.dll
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
+C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.BrowserLink.dll
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
@@ -109,3 +93,4 @@ C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\DataBase.pdb
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\Models.pdb
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\MyShop.Views.dll
 C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\MyShop.Views.pdb
+C:\MyShop\MyShop\obj\Release\net5.0\PubTmp\Out\MyShop.deps.json
