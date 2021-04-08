@@ -79,7 +79,13 @@ C:\MyShop\MyShop\obj\Release\net5.0\MyShop.dll
 C:\MyShop\MyShop\obj\Release\net5.0\ref\MyShop.dll
 C:\MyShop\MyShop\obj\Release\net5.0\MyShop.pdb
 C:\MyShop\MyShop\obj\Release\net5.0\MyShop.genruntimeconfig.cache
-C:\MyShop\MyShop\bin\Release\net5.0\Humanizer.dll
-C:\MyShop\MyShop\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\MyShop\MyShop\bin\Release\net5.0\Microsoft.VisualStudio.Web.BrowserLink.dll
 C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
+C:\MyShop\MyShop\bin\Release\net5.0\MailKit.dll
+C:\MyShop\MyShop\bin\Release\net5.0\MimeKit.dll
+C:\MyShop\MyShop\bin\Release\net5.0\BouncyCastle.Crypto.dll
+C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Cart\Payment.cshtml.g.cs
+C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Home\About.cshtml.g.cs
+C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Product\AddCategory.cshtml.g.cs
+C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Shared\Components\TovarList\Default.cshtml.g.cs

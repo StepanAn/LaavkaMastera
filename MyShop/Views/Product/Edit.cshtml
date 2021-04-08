@@ -4,12 +4,15 @@
     <input type="text" name="Name" value="@Model.Name" /><br />
     <label>Цена</label>
     <input type="number" name="Price" value="@Model.Price" /><br />
-    <label>Путь к картинке</label>
-    <input type="text" name="Img" value="@Model.Img" /><br />
-    <label>Короткое описание</label>
-    <input type="text" name="ShortDesc" value="@Model.ShortDesc" /><br />
-    <label>Длинное описание</label>
-    <input type="text" name="LongDesc" value="@Model.LongDesc" /><br />
-    @await Component.InvokeAsync("MenuCategory", new { la = true })
+    <label>Описание</label>
+    <textarea name="LongDesc" style="resize:both">@Model.LongDesc</textarea><br />
+    <select name="CategoryId">
+        @foreach(var item in Model.Categories)
+            {
+                <option value="@item.Id">@item.CategoryName</option>
+            }
+    </select>
+    <input type="hidden" name="Img" value="@Model.Img" />
+    <input type="hidden" name="IsFavorite" value="@Model.IsFavorite" />
     <input type="submit" /><br />
 </form>

@@ -19,9 +19,9 @@ namespace MyShop
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // получаем строку подключения из файла конфигурации
-            string connection = Configuration.GetConnectionString("DefaultConnection");
-            // добавляем контекст MobileContext в качестве сервиса в приложение
+            //string connection = Configuration.GetConnectionString("DefaultConnection");
+            //string connection = "Data Source=SQL5103.site4now.net;Initial Catalog=DB_A71A08_A345678;User Id=DB_A71A08_A345678_admin;Password=e1A3L788;";
+            string connection = "Server=(localdb)\\mssqllocaldb;Database=MyShop;Trusted_Connection=True;";
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(connection));
             services.AddSignalR();

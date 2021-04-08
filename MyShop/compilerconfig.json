@@ -10,5 +10,13 @@
   {
     "outputFile": "wwwroot/css/details.css",
     "inputFile": "Sass/details.scss"
+  },
+  {
+    "outputFile": "wwwroot/js/lines.es5.js",
+    "inputFile": "wwwroot/js/lines.js"
+  },
+  {
+    "outputFile": "wwwroot/css/payment.css",
+    "inputFile": "Sass/payment.scss"
   }
 ]

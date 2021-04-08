@@ -13,18 +13,20 @@
             <div class="h5">
                 @Model.Price.ToString("c")
             </div>
-            <a asp-controller="Cart" asp-action="AddToCart" data-ajax="true" data-ajax-method="post" asp-route-id="@Model.Id" class="to-cart btn btn-warning">
+            <a data-ajax="true" data-ajax-method="post" class="to-cart btn btn-warning" id="tocart" asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.Id">
                 В корзину
             </a>
             <br />
             @if (Static.IAdmin)
             {
-             <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.Id">
+             <a asp-controller="Product" asp-action="Edit" asp-route-productId="@Model.Id">
                   Изменить
              </a><br />
-             <a asp-controller="Product" asp-action="Delete" asp-route-id="@Model.Id">
+             <a asp-controller="Product" asp-action="Delete" asp-route-productId="@Model.Id">
                  Удалить
              </a>}
              </div>
     </div>
 </div>
+@section Scripts{ 
+}

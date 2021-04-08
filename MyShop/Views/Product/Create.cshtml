@@ -8,15 +8,15 @@
     <label>Короткое описание</label>
     <input type="text" name="ShortDesc" /><br />
     <label>Длинное описание</label>
-    <input type="text" name="LongDesc" /><br />
+    <textarea name="LongDesc" style="resize: both"></textarea><br />
     <label>Категория</label>
-    @*<select name="CategoryId">
+    <select name="CategoryId">
         @foreach(var item in Model)
             {
                 <option value="@item.Id">@item.CategoryName</option>
             }
-    </select>*@
-    @*<label>Картинка</label>
-    <input type="file" name="Img" />*@
+    </select>
+    <label>Картинка</label>
+    <input type="file" name="Img" />
     <input type="submit" /><br />
 </form>

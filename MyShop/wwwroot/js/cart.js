@@ -4,7 +4,7 @@ $(function () {
         let removeItem = $(this).parents('.item');
         let totalPriceTag = $(removeItem[0]).find('.total-price');
         let amountTag = $(removeItem[0]).find('.amount');
-        let totalPrice = +$(totalPriceTag[0]).html();
+        let totalPrice = totalPriceTag[0].dataset.price;
         let amount = +$(amountTag[0]).html();
         editToolbar(-totalPrice, -amount);
         $(removeItem[0]).remove();
@@ -32,18 +32,21 @@ function edit(targetObject, changeValue) {
     if (amount == 0) {
         $(parent).remove();
     }
-    let priceOffset = price * changeValue;
+    let priceOffset = price * +changeValue;
     let totalPrice = price * amount;
+    totalPriceTag[0].dataset.price = totalPrice;
     editToolbar(priceOffset, changeValue);
-    $(totalPriceTag[0]).html(totalPrice);
+    $(totalPriceTag[0]).html(`${totalPrice},00&#8381;`);
     $(amountTag[0]).html(amount);
 }
 function editToolbar(priceOffset, amountOffset) {
-    let allPrice = +$('#all-price').html();
+    let allPriceTag = $('#all-price');
+    let allPrice = +allPriceTag[0].dataset.allprice;
     let allAmount = +$('#all-amount').html();
     allPrice += +priceOffset;
     allAmount += +amountOffset;
-    $('#all-price').html(allPrice);
+    allPriceTag[0].dataset.allprice = allPrice;
+    $(allPriceTag[0]).html(`${allPrice},00&#8381;`);
     $('#all-amount').html(allAmount);
 
 }

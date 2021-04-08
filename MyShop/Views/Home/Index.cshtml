@@ -1,24 +1,25 @@
 ﻿@{ ViewData["Title"] = "Главная";
-                Layout = null; }
+    Layout = null;
+    @using System.Text.Json;
+    }
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="stylesheet" href="~/css/min.bundle/bundle.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"
-          asp-fallback-href="~/lib/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css"
-          asp-fallback-test-class="hidden" asp-fallback-test-property="visibility" asp-fallback-test-value="hidden">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"
-            asp-fallback-src="~/lib/bootstrap-5.0.0-beta2-dist/js/bootstrap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            asp-fallback-src="~/lib/jquery/dist/jquery.js"
-            asp-fallback-test="window.jQuery"></script>
-    <script src="~/lib/jquery-ajax-unobtrusive-master/src/jquery.unobtrusive-ajax.js"></script>
+    @*<link rel="stylesheet" href="~/ready/index/css.min.css" />*@
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/footer.css" />
+    <link rel="stylesheet" href="~/css/maincontent.css" />
+    <link rel="stylesheet" href="~/css/slider.css" />
+    <link rel="stylesheet" href="~/css/tovarlist.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="~/ready/layout/jquery.unobtrusive-ajax.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="~/css/footer.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
     <style>
         body {
@@ -29,7 +30,7 @@
 <body>
     <div class="white shadow-sm">
         <header>
-            <div class="klukva">
+            <div class="klukva" style="color:white">
                 Клюква
             </div>
             <div class="button" id="button" width="30">
@@ -37,15 +38,24 @@
                 <span></span>
                 <span></span>
             </div>
-            <div class="company">
-                <a href="#">
-                    <div class="logo">
-                        <img src="~/img/interior design.png" />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="flowers">
+                        <img src="~/img/flowers2.png" />
                     </div>
-                    <div class="companyname">
-                        <img src="~/img/interior design — копия.png" width="400" />
+                </div>
+                <div class="col-md-6">
+                    <div class="company">
+                        <a asp-action="Index">
+                            <div class="logo">
+                                <img src="~/img/interior design.png" />
+                            </div>
+                            <div class="companyname">
+                                <img src="~/img/interior design — копия.png" width="400" />
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
             <nav>
                 <div class="flex-container" id="menu">
@@ -55,28 +65,38 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="#">
+                        <a asp-controller="Search" asp-action="GetAll">
                             Магазин
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="#">
+                        <a asp-action="About">
                             О нас
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="#">
+                        <a asp-action="Contact">
                             Контакты
                         </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach (var item in Static.Categories)
+                            {
+                               <li><a class="dropdown-item" asp-action="Search" asp-controller="Search" asp-route-id="@item.Id">@item.CategoryName</a></li>
+                            }
+                        </ul>
                     </div>
                 </div>
                 <div class="content">
                     <a asp-controller="Cart" asp-action="AllCart">
-                        <div class="allcart">
+                        <div class="allcart btn btn-warning">
                             <div class="cart">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
-                                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                                </svg>
+                                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />                                </svg>
                             </div>
                             <div class="cart">
                                 Корзина
@@ -84,12 +104,12 @@
                         </div>
                     </a>
                     <div class="search">
-                        <form>
+                        <form asp-controller="Search" asp-action="SearchByName" method="get">
                             <div class="search1">
-                                <input type="search" />
+                                <input type="search" class="form-control" name="name" />
                             </div>
                             <div class="search2">
-                                <input type="submit" />
+                                <input type="submit" class="btn btn-warning" value="Искать" />
                             </div>
                         </form>
                     </div>
@@ -99,29 +119,41 @@
         <main>
             <div class="main-content shadow-sm">
                 <div class="slider" id="slider-controller">
-                    <div style="background-color: green" class="kkkk"></div>
-                    <div style="background-color: blue" class="kkk"></div>
-                    <div style="background-color: orange" class="kkk"></div>
-                    <div style="background-color: purple" class="kkk"></div>
+                    <div class="kkkk slide-item">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="~/img/20151215_130851.png" class="red-shadow" />
+                            </div>
+                            <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center">
+                                <div class="h1">Скидка 60%</div>
+                                <div class="h6">При предвадительном заказе</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kkk slide-item">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="~/img/DSC_0750.png" class="green-shadow" />
+                            </div>
+                            <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center">
+                                <div class="h1">Скидка 20%</div>
+                                <div class="h6">При покупке 2 товаров</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kkk slide-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="~/img/20151211_115740.png" class="yellow-shadow" />
+                            </div>
+                            <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center">
+                                <div class="h1">Скидка 13%</div>
+                                <div class="h6">При заказе от 4000&#8381;</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="container-for-product">
-                    @foreach (var item in Model.Products)
-                    {
-        <div class="product">
-            <a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id">
-                <div class="product-name">@item.Name</div>
-                <div class="product-img">
-                    <img src="@item.Img" />
-                </div>
-                <div>
-                    @item.Price.ToString("c")
-                </div>
-                <div>
-                    @item.ShortDesc
-                </div>
-            </a>
-        </div>}
-                </div>
+                 @await Component.InvokeAsync("TovarList", Model.Products)
             </div>
         </main>
         <div class="comments">
@@ -140,13 +172,16 @@
             <div id="comment-box" class="ms-4 mt-5 me-4">
                 @for (int i = Model.Comments.Count - 1; i >= 0; i--)
                 {
-                    <div class="mt-3">
+                    <div class="mt-3 comment">
                         <div class="com-img">
                             <img src="~/img/noavatar92.png" class="avatar" />
                         </div>
                           <div class="comment-contetnt ms-1">
                                 <span class="user-name">@Model.Comments[i].NameUser</span>
-                                <span>@Model.Comments[i].CommentDate.ToLocalTime().ToString()</span>
+                                <span class="date" data-date=@{
+                                      string date = JsonSerializer.Serialize<DateTime>(Model.Comments[i].CommentDate);
+                                    <text>@date</text>
+                                    }></span>
                                 <p>@Model.Comments[i].Letter</p>
                           </div>
                     </div>
@@ -158,9 +193,9 @@
     </div>
     <script src="~/js/microsoft/signalr/dist/browser/signalr.min.js"></script>
     @*<script src="~/js/min.bundle/bundle.min.js"></script>*@
+    <script src="~/js/lines.js"></script>
     <script src="~/js/comments.js"></script>
-    <script src="~/js/menu.js"></script>
     <script src="~/js/slider.js"></script>
-
+    <script src="~/js/menu.js"></script>
 </body>
 </html>

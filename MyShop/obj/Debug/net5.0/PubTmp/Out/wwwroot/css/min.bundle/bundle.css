@@ -2,11 +2,11 @@
     --myborder-size: 1em;
     --leftandright-margin: 0.6em;
 }
-.form{
-    width: 30em;
+.form textarea{
+    max-width: 30em;
 }
-.form-name{
-    width: 15em;
+.form-name input{
+    max-width: 15em;
 }
 .comment-contetnt {
     display: inline-block;
@@ -29,46 +29,6 @@
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
-.product {
-    margin: 2em 0em 2em 0em;
-}
-
-    .product a {
-        text-decoration: none;
-        color: black;
-    }
-
-        .product a:hover {
-            color: black;
-        }
-
-.container-for-product {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 8em 1em 5em 1em;
-}
-
-.product-img img {
-    width: 10em;
-}
-
-p {
-    white-space: pre-line;
-}
-
-.content a {
-    text-decoration: none;
-    color: black;
-}
-
-    .content a:hover {
-        color: black;
-    }
-
-.product-name {
-    margin-bottom: 0.5em;
-}
 
 .comments {
     border: var(--myborder-size) solid #ffb500;
@@ -83,19 +43,26 @@ p {
 }
 
 @media(max-width: 30em) {
-    .container-for-product {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
     :root {
         --myborder-size: 0em;
     }
 }
 
+:root{
+    --marginTopForLogo:200px;
+    --marginTopForFlowers: 5em;
+
+}
 .buttton {
     display: none;
+}
+.flowers img {
+    width: 90%;
+    filter: drop-shadow(.3em .5em 1em #9cbc1c);
+}
+.flowers{
+    margin-top: var(--marginTopForFlowers);
 }
 
 .logo {
@@ -116,7 +83,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     width: 430px;
-    margin-top: 200px;
+    margin-top: var(--marginTopForLogo);
     border-bottom: 5px solid #F5E944;
     border-right: 10px solid #F5E944;
     padding: 10px;
@@ -143,14 +110,14 @@ p {
     font-family: 'Nunito', sans-serif;
 }
 
-.menu-item {
+/*.menu-item {
 }
 
     .menu-item a:hover {
         text-shadow: 6px 4px 3px rgba(150, 150, 150, 1);
         color: black;
         font-size: 135%;
-    }
+    }*/
 
 .cart {
     display: inline;
@@ -188,8 +155,10 @@ p {
 
 @media (max-width: 50em) {
     .company {
-        margin-top: 8em;
         width: 22em;
+    }
+    :root{
+        --marginTopForLogo: 8em;
     }
 
     .companyname img {
@@ -241,6 +210,10 @@ p {
 }
 
 @media(max-width: 30em) {
+    :root {
+        --marginTopForLogo: 5em;
+    }
+
     .logo img {
         width: 4em;
     }
@@ -251,7 +224,6 @@ p {
 
     .company {
         width: 12em;
-        margin-top: 5em;
     }
 
     .logo {
@@ -275,14 +247,26 @@ p {
 
 .slider {
     height: 35em;
-    margin: 1em 1em 1em 1em;
+    margin: 1em;
     position: relative;
 }
 
-    .slider div {
+    .slider slide-item {
         position: absolute;
         height: 35em;
         width: 100%;
         top: 0em;
         left: 0em;
     }
+    .slider img{
+        width: 80%;
+    }
+.red-shadow {
+    filter: drop-shadow(.3em .5em 1em #d77f32);
+}
+.green-shadow {
+    filter: drop-shadow(.3em .5em 1em #82c61b);
+}
+.yellow-shadow {
+    filter: drop-shadow(.3em .5em 1em #d5db16);
+}

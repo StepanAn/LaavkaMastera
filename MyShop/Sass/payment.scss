@@ -1,0 +1,33 @@
+﻿.payment{
+    max-width: 25em;
+    input[type="submit"]{
+        margin-top: .5em;
+    }
+}
+.field-validation-error {
+    display: block;
+    margin-top: -1.2em !important;
+    font-size: 90%;
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}

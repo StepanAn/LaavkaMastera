@@ -2,11 +2,11 @@
     --myborder-size: 1em;
     --leftandright-margin: 0.6em;
 }
-.form{
-    width: 30em;
+.form textarea{
+    max-width: 30em;
 }
-.form-name{
-    width: 15em;
+.form-name input{
+    max-width: 15em;
 }
 .comment-contetnt {
     display: inline-block;
@@ -29,46 +29,6 @@
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
-.product {
-    margin: 2em 0em 2em 0em;
-}
-
-    .product a {
-        text-decoration: none;
-        color: black;
-    }
-
-        .product a:hover {
-            color: black;
-        }
-
-.container-for-product {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 8em 1em 5em 1em;
-}
-
-.product-img img {
-    width: 10em;
-}
-
-p {
-    white-space: pre-line;
-}
-
-.content a {
-    text-decoration: none;
-    color: black;
-}
-
-    .content a:hover {
-        color: black;
-    }
-
-.product-name {
-    margin-bottom: 0.5em;
-}
 
 .comments {
     border: var(--myborder-size) solid #ffb500;
@@ -83,11 +43,6 @@ p {
 }
 
 @media(max-width: 30em) {
-    .container-for-product {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
     :root {
         --myborder-size: 0em;

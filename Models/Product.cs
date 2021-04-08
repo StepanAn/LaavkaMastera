@@ -6,8 +6,8 @@
         public string Name { get; set; }
         public string Img { get; set; }
         public int IsFavorite { get; set; }
-        public string ShortDesc { get; set; }
         public string LongDesc { get; set; }
+        public string ShortDesc { get; set; }
         public int Id { get; set; }
         public Category Category { get; set; }
         public int CategoryId { get; set; }

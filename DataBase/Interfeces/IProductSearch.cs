@@ -7,5 +7,6 @@ namespace DataBase
     public interface IProductSearch : IRepozitory<Product>
     {
         Task<List<Product>> GetByCategory(int id);
+        Task<List<Product>> GetByName(string name);
     }
 }

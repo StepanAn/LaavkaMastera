@@ -1,1 +1,2 @@
 C:\MyShop\MyShop\wwwroot\img\1111.jpeg|216109
+C:\MyShop\MyShop\wwwroot\img\flowers2.png|510687

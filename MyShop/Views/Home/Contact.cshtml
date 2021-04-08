@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Контакты";
+}
+<div class="h5 text-center">Наши контакты</div>
+<div class="mx-4">
+    <div>Почта: anufr8319@gmail.com</div>
+    <div>Телефон: +79957784765</div>
+    <div class="h6">Напишите нам</div>
+    <div>
+        <form asp-controller="Home" asp-action="WriteUs" data-ajax="true" data-ajax-method="post" data-ajax-success="
+          document.querySelector('#letter').value = 'Спасибо, что написали нам';
+          document.querySelector('#nameu').value = '';">
+            <span>Напишите нам:</span>
+            <textarea class="form-control" style="max-width: 25em" id="letter" name="message"></textarea>
+            <label for="nameu" class="form-label mt-1">Имя</label>
+            <input type="text" id="nameu" class="form-control" style="max-width: 15em" name="name" />
+            <input type="submit" class="btn btn-warning mt-2" value="Отправить" />
+        </form>
+    </div>
+</div>

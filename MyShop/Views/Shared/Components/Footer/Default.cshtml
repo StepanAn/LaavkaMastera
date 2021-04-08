@@ -9,7 +9,10 @@
                     </div>
                 </div>
                 <div>
-                    Пара строчек
+                    Мы - большая дружная семья. У каждого из нас есть свои хобби и увлечения.
+                    Вот одно из них -  это свит-дизайн. Изготовление букетов, памятных сувениров из конфет, оформление подарков. Женская половина семьи увлекается созданием композиций из цветов с конфетами, индивидуальным и оригинальным оформлением подарков.
+                    А Степан очень заинтересовался изучением создания сайтов, прошел курс по изучению, и мы хотим представить вашему вниманию результат нашей работы.
+                    На нашем сайте вы найдете примеры наших работ.
                 </div>
             </div>
         </div>
@@ -47,11 +50,16 @@
                     <div>anufr8319@gmail.com</div>
                 </div>
                 <div>
-                    <span>Напишите нам:</span>
-                    <textarea class="form-control"></textarea>
-                    <label for="name" class="form-label mt-1">Имя</label>
-                    <input type="text" id="name" class="form-control" />
-                    <input type="submit" class="btn btn-warning mt-2" value="Отправить" />
+                    <form asp-action="WriteUs" asp-controller="Home" data-ajax="true" data-method="post" data-ajax-success="
+                          document.querySelector('#letter-input').value = 'Спасибо, что написали нам';
+                          document.querySelector('#name').value = '';
+                          ">
+                        <span>Напишите нам:</span>
+                        <textarea class="form-control" id="letter-input" name="message"></textarea>
+                        <label for="name" class="form-label mt-1">Имя</label>
+                        <input type="text" id="name" class="form-control" name="name" />
+                        <input type="submit" class="btn btn-warning mt-2" value="Отправить" />
+                    </form>
                 </div>
             </div>
 
@@ -61,6 +69,6 @@
     @if(Static.IAdmin) 
     {
           <a asp-action="Create" asp-controller="Product">Новый товар</a>
+          <a asp-action="AddCategory" asp-controller="Product">Новая категория</a>
     }
 </footer>
-<script src="~/js/lines.js"></script>

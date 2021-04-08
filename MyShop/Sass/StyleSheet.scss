@@ -1,4 +1,6 @@
-﻿$yellow: #F5E944;
+﻿
+
+$yellow: #F5E944;
 
 :root {
     --myborder-size: 0.5em;
@@ -34,13 +36,15 @@ header {
     text-align: center;
 }
 .cart {
-    a{
+    a {
         color: black;
-        text-decoration:none;
+        text-decoration: none;
     }
-    .total-price{
+
+    .total-price {
         float: left;
     }
+
     img {
         height: 6em;
         float: left;
@@ -74,4 +78,7 @@ header {
     padding-bottom: 3em;
     margin-top: 0em;
     margin-bottom: 0em;
+}
+.form{
+    max-width:10em;
 }

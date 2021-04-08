@@ -5,7 +5,8 @@
       "wwwroot/js/comments.js",
       "wwwroot/js/cart.js",
       "wwwroot/js/slider.js",
-      "wwwroot/js/menu.js"
+      "wwwroot/js/menu.js",
+      "wwwroot/js/lines.js"
     ]
   },
   {
@@ -14,6 +15,30 @@
       "wwwroot/css/maincontent.css",
       "wwwroot/css/header.css",
       "wwwroot/css/slider.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/ready/index/css.css",
+    "inputFiles": [
+      "wwwroot/css/tovarlist.css",
+      "wwwroot/css/footer.css",
+      "wwwroot/css/min.bundle/bundle.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/ready/layout/css.css",
+    "inputFiles": [
+      "wwwroot/css/details.min.css",
+      "wwwroot/css/tovarlist.css",
+      "wwwroot/css/layout2.min.css",
+      "wwwroot/css/footer.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/ready/layout/js.js",
+    "inputFiles": [
+      "wwwroot/js/lines.js",
+      "wwwroot/js/cart.js"
     ]
   }
 ]

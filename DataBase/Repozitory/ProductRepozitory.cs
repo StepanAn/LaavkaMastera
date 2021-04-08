@@ -2,6 +2,7 @@
 using MyShop.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DataBase
@@ -24,14 +25,19 @@ namespace DataBase
             return await db.Products.ToListAsync();
         }
 
-        public Task<List<Product>> GetByCategory(int id)
+        public async Task<List<Product>> GetByCategory(int id)
         {
-            throw new NotImplementedException();
+            return await db.Products.Where(p => p.CategoryId == id).ToListAsync();
         }
 
         public async Task<Product> GetByIdAsync(int id)
         {
             return await db.Products.FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        public async Task<List<Product>> GetByName(string name)
+        {
+            return await db.Products.Where(p => p.Name == name).ToListAsync();
         }
 
         public async Task RemoveAsync(Product obj)
@@ -40,9 +46,10 @@ namespace DataBase
             await db.SaveChangesAsync();
         }
 
-        public Task Update(Product obj)
+        public async Task Update(Product obj)
         {
-            throw new NotImplementedException();
+            db.Products.Update(obj);
+            await db.SaveChangesAsync();
         }
     }
 }

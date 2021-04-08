@@ -49,3 +49,6 @@ header {
   padding-bottom: 3em;
   margin-top: 0em;
   margin-bottom: 0em; }
+
+.form {
+  max-width: 10em; }

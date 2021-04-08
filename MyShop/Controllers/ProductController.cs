@@ -14,12 +14,10 @@ namespace MyShop.Controllers
     {
         private readonly IData db;
         private readonly IWebHostEnvironment _appEnvironment;
-        private readonly ApplicationContext context2;
-        public ProductController(IData context, IWebHostEnvironment appEnvironment, ApplicationContext context1)
+        public ProductController(IData context, IWebHostEnvironment appEnvironment)
         {
             db = context;
             _appEnvironment = appEnvironment;
-            context2 = context1;
         }
         [HttpGet]
         public async Task<IActionResult> Details(int? id)
@@ -41,34 +39,30 @@ namespace MyShop.Controllers
         }
         [HttpPost]
         [AdminFilter]
-        public async Task<IActionResult> Create(Product product)
+        public async Task<IActionResult> Create(ProductViewModel product)
         {
-            //if(product != null)
-            //{
-            //    if(product.Img != null)
-            //    {
-            //        string path = "/img/" + product.Img.FileName;
-            //        using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
-            //        {
-            //            await product.Img.CopyToAsync(fileStream);
-            //        }
-            //        Category category = await db.Categories.GetByIdAsync(product.CategoryId);
-            //        Product newProduct = new()
-            //        {
-            //            Img = path,
-            //            ShortDesc = product.ShortDesc,
-            //            LongDesc = product.LongDesc,
-            //            Name = product.Name,
-            //            Price = product.Price,
-            //            Category = category
-            //        };
-            //        context2.Products.Add(newProduct);
-            //        context2.SaveChanges();
-            //    }
-            //}
-            //context2.Products.Add(product);
-            //await context2.SaveChangesAsync();
-            await db.Products.AddAsync(product);
+            if (product != null)
+            {
+                if (product.Img != null)
+                {
+                    string path = "/img/" + product.Img.FileName;
+                    using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
+                    {
+                        await product.Img.CopyToAsync(fileStream);
+                    }
+                    Category category = await db.Categories.GetByIdAsync(product.CategoryId);
+                    Product newProduct = new()
+                    {
+                        Img = path,
+                        LongDesc = product.LongDesc,
+                        Name = product.Name,
+                        Price = product.Price,
+                        CategoryId = category.Id
+                    };
+                    await db.Products.AddAsync(newProduct);
+                }
+            }
+            
             return RedirectToAction("Index", "Home");
         }
         public IActionResult Login()
@@ -81,6 +75,53 @@ namespace MyShop.Controllers
             {
                 Static.IAdmin = true;
             }
+            return RedirectToAction("Index", "Home");
+        }
+        [AdminFilter]
+        [HttpGet]
+        public async Task<IActionResult> Edit(int productId)
+        {
+            Product product = await db.Products.GetByIdAsync(productId);
+            EditViewModel viewModel = new()
+            {
+                Price = product.Price,
+                Name = product.Name,
+                LongDesc = product.LongDesc,
+                Img = product.Img,
+                IsFavorite = product.IsFavorite,
+                Categories = await db.Categories.GetAllAsync(),
+                Id = product.Id
+            };
+            return View(viewModel);
+        }
+        [AdminFilter]
+        [HttpPost]
+        public async Task<IActionResult> Editt(Product product)
+        {
+            await db.Products.Update(product);
+            return RedirectToAction("Index", "Home");
+        }
+        [AdminFilter]
+        [HttpGet]
+        public IActionResult AddCategory()
+        {
+            return View();
+        }
+        [AdminFilter]
+        [HttpPost]
+        public async Task<IActionResult> AddCategoryy(string categoryName)
+        {
+            await db.Categories.AddAsync(new Category()
+            {
+                CategoryName = categoryName,
+            });
+            return RedirectToAction("Index", "Home");
+        }
+        [AdminFilter]
+        public async Task<IActionResult> Delete(int productId)
+        {
+            Product product = await db.Products.GetByIdAsync(productId);
+            await db.Products.RemoveAsync(product);
             return RedirectToAction("Index", "Home");
         }
     }

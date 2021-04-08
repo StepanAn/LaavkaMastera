@@ -1,9 +1,7 @@
 ﻿using DataBase;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using MyShop.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MyShop.Controllers
@@ -16,6 +14,12 @@ namespace MyShop.Controllers
             db = context;
         }
         [HttpGet]
+        public async Task<IActionResult> SearchByName(string name)
+        {
+            List<Product> products = await db.Products.GetByName(name);
+            return View("Search", products);
+        }
+        [HttpGet]
         public async Task<IActionResult> Search(int? id)
         {
             if (id != null)
@@ -25,6 +29,11 @@ namespace MyShop.Controllers
                 return View(products);
             }
             return NotFound();
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            return View("Search", await db.Products.GetAllAsync());
         }
     }
 }

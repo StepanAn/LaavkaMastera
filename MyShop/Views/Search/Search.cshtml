@@ -1,17 +1,2 @@
 ﻿@{ ViewData["Title"] = "Категория"; }
-@foreach (var item in Model)
-{
-<a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id">
-    <div class="card my-3 mx-3" style="width: 13rem; display: inline-block;">
-        <img src="@item.Img" class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">
-                <h3>@item.Name</h3><br />
-                @item.ShortDesc
-                <br />
-                @item.Price.ToString("c")<br />
-            </p>
-
-        </div>
-    </div>
-</a>}
+@await Component.InvokeAsync("TovarList", Model)

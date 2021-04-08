@@ -1,0 +1,38 @@
+﻿.product {
+    margin: 2em 0em 2em 0em;
+}
+
+    .product a {
+        text-decoration: none;
+        color: black;
+    }
+
+        .product a:hover {
+            color: black;
+        }
+
+.product-img img {
+    width: 20em;
+}
+/*@media (max-width: 50em) {
+    .product-img img {
+        width: 10em;
+    }
+}
+*/
+    p {
+        white-space: pre-line;
+    }
+
+    .content a {
+        text-decoration: none;
+        color: black;
+    }
+
+        .content a:hover {
+            color: black;
+        }
+
+    .product-name {
+        margin-bottom: 0.5em;
+    }

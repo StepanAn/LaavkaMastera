@@ -3,25 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MyShop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"
-          asp-fallback-href="~/lib/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css"
-          asp-fallback-test-class="hidden" asp-fallback-test-property="visibility" asp-fallback-test-value="hidden">
-    <link rel="stylesheet" href="~/css/layout2.css" />
-    <link rel="stylesheet" href="~/css/footer.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"
-            asp-fallback-src="~/lib/bootstrap-5.0.0-beta2-dist/js/bootstrap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            asp-fallback-src="~/lib/jquery/dist/jquery.js"
-            asp-fallback-test="window.jQuery"></script>
-    <script src="~/lib/jquery-ajax-unobtrusive-main/src/jquery.unobtrusive-ajax.js"></script>
-    <link rel="stylesheet" href="~/css/details.min.css" />
+    <title>@ViewData["Title"] - Лавка Мастера</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/ready/layout/css.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="~/ready/layout/jquery.unobtrusive-ajax.min.js"></script>
+    @await RenderSectionAsync("css", required: false)
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" asp-action="Index" asp-controller="Home">
                     <img src="~/img/interior design.png" />
                     Лавка мастера
                 </a>
@@ -31,20 +25,33 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link active" aria-current="page" asp-action="Index" asp-controller="Home">
                                 Главная
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Ссылка</a>
+                            <a class="nav-link" asp-action="About" asp-controller="Home">О нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+                            <a class="nav-link" asp-action="Contact" asp-controller="Home">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="AllCart" asp-controller="Cart">Корзина</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Каталог
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @foreach (var item in Static.Categories)
+                                {
+                    <li><a class="dropdown-item" asp-action="Search" asp-controller="Search" asp-route-id="@item.Id">@item.CategoryName</a></li>}
+                            </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                    <form class="d-flex" asp-action="SearchByName" asp-controller="Search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск" name="name">
+                        <button class="btn btn-outline-warning" type="submit">Поиск</button>
                     </form>
                 </div>
             </div>
@@ -55,5 +62,8 @@
     @RenderBody()
     @await Component.InvokeAsync("Footer")
     @await RenderSectionAsync("Scripts", required: false)
+    @*<script src="~/ready/layout/js.min.js"></script>*@
+    <script src="~/js/lines.js"></script>
+    <script src="~/js/cart.js"></script>
 </body>
 </html>

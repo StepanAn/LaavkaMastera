@@ -3,6 +3,7 @@
     .build();
 hubConnection.on("Send", function (com) {
     let comment = document.createElement('div');
+    let date = new Date().toLocaleString()
     comment.innerHTML = 
  `<div class="mt-3">
     <div class="com-img">
@@ -10,7 +11,7 @@ hubConnection.on("Send", function (com) {
     </div>
     <div class="comment-contetnt ms-1">
           <span class="user-name">${com.nameUser}</span>
-          <span>${com.commentDate}</span>
+          <span>${date}</span>
           <p>${com.letter}</p>
     </div>
  </div>`;
@@ -25,3 +26,15 @@ $('#send-button').click(function () {
     }
 });
 hubConnection.start();
+$(() => {
+    let comments = document.querySelectorAll(".date");
+    for (let item of comments) {
+        let invalidStringDate = item.dataset.date;
+        let stringDate = invalidStringDate.slice(1, invalidStringDate.length - 1);
+        let date = new Date(Date.parse(stringDate));
+        let hoursOfsset = new Date().getTimezoneOffset() / 60;
+        date.setHours(date.getHours() - hoursOfsset);
+        let readyDateString = date.toLocaleString();
+        item.innerHTML = readyDateString;
+    }
+});

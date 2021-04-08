@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Оплата";
+}
+@model MyShop.ViewModel.CustomerViewModel
+    <div class="payment mx-4">
+        <form method="post" asp-controller="Cart" asp-action="Paymentt" asp-antiforgery="true">
+            <div class="validation" asp-validation-summary="ModelOnly"></div>
+            <div>
+                <label asp-for="FirstName" class="form-label">Ваше имя</label><br />
+                <input type="text" asp-for="FirstName" class="form-control" /><br />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div>
+                <label asp-for="SurName" class="form-label">Ваша фамилия</label><br />
+                <input type="text" asp-for="SurName" class="form-control" /><br />
+                <span asp-validation-for="SurName"></span>
+            </div>
+            <div>
+                <label asp-for="Adress" class="form-label">Ваш адрес</label><br />
+                <input type="text" asp-for="Adress" class="form-control" /><br />
+                <span asp-validation-for="Adress"></span>
+            </div>
+            <div>
+                <label asp-for="Phone" class="form-label">Ваш телефон</label><br />
+                <input type="text" asp-for="Phone" class="form-control" /><br />
+                <span asp-validation-for="Phone"></span>
+            </div>
+            <div>
+                <label asp-for="Email" class="form-label">Ваш email</label><br />
+                <input type="text" asp-for="Email" class="form-control" /><br />
+                <span asp-validation-for="Email"></span>
+            </div>
+            <input type="submit" class="btn btn-warning" value="Отправить" />
+
+        </form>
+    </div>
+    @section scripts{
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    }
+    @section css{
+        <link rel="stylesheet" href="~/css/payment.min.css" />
+    }
