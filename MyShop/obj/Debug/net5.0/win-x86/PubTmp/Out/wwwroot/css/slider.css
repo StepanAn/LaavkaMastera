@@ -1,0 +1,26 @@
+﻿
+.slider {
+    height: 35em;
+    margin: 1em;
+    position: relative;
+}
+
+    .slider slide-item {
+        position: absolute;
+        height: 35em;
+        width: 100%;
+        top: 0em;
+        left: 0em;
+    }
+    .slider img{
+        width: 80%;
+    }
+.red-shadow {
+    filter: drop-shadow(.3em .5em 1em #d77f32);
+}
+.green-shadow {
+    filter: drop-shadow(.3em .5em 1em #82c61b);
+}
+.yellow-shadow {
+    filter: drop-shadow(.3em .5em 1em #d5db16);
+}

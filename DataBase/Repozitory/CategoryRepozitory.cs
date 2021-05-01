@@ -29,7 +29,7 @@ namespace DataBase
             return await db.Categories.FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public Task RemoveAsync(Category obj)
+        public Task Remove(Category obj)
         {
             throw new NotImplementedException();
         }

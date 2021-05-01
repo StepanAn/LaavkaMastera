@@ -2,6 +2,26 @@
   --myborder-size: 0.5em;
   --left-and-right-margin: .1em; }
 
+* {
+  font-family: 'Poiret One', cursive;
+  font-weight: 900 !important; }
+
+.pink {
+  /*    margin-left: 60%;*/
+  margin-right: 10em;
+  width: 8em;
+  float: right; }
+
+.dot {
+  font-size: 300%;
+  height: .9em;
+  margin-top: -.7em; }
+
+.family {
+  margin-top: 3em; }
+  .family img {
+    width: 50em; }
+
 body {
   border: var(--myborder-size) solid #F5E944;
   min-height: 50em;
@@ -52,3 +72,7 @@ header {
 
 .form {
   max-width: 10em; }
+
+@media (max-width: 600px) {
+  .family img {
+    width: 80%; } }

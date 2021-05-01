@@ -1,4 +1,5 @@
-﻿<div class="container-lg">
+﻿@{ ViewData["Title"] = "Детали"; }
+<div class="container-lg">
     <div class="row justify-content-around">
         <div class="col-sm-8 ms-2">
             <img src="@Model.Img" class="product-picture" />
@@ -11,22 +12,32 @@
                 @Model.Name
             </div>
             <div class="h5">
-                @Model.Price.ToString("c")
+                @Model.Price,00&#8381;
             </div>
-            <a data-ajax="true" data-ajax-method="post" class="to-cart btn btn-warning" id="tocart" asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.Id">
+            @if (ViewBag.ProductInCart)
+            {
+                <a data-ajax="true" data-ajax-method="post" class="to-cart btn btn-warning" asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.Id">
+                    Уже есть в корзине
+                </a>
+            }
+            else
+            {
+            <a data-ajax="true" data-ajax-method="post" class="to-cart btn btn-warning" id="tocart" asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.Id" data-ajax-success=" document.querySelector('#tocart').innerHTML = 'Уже в корзине'">
                 В корзину
             </a>
+            }
             <br />
             @if (Static.IAdmin)
             {
-             <a asp-controller="Product" asp-action="Edit" asp-route-productId="@Model.Id">
-                  Изменить
-             </a><br />
-             <a asp-controller="Product" asp-action="Delete" asp-route-productId="@Model.Id">
-                 Удалить
-             </a>}
-             </div>
+        <a asp-controller="Product" asp-action="Edit" asp-route-productId="@Model.Id">
+            Изменить
+        </a><br />
+                        <a asp-controller="Product" asp-action="Delete" asp-route-productId="@Model.Id">
+                            Удалить
+                        </a>}
+        </div>
     </div>
 </div>
 @section Scripts{ 
+<script src="~/js/details.js" ></script>
 }

@@ -22,7 +22,7 @@ namespace DataBase
             throw new NotImplementedException();
         }
 
-        public Task RemoveAsync(Customer obj)
+        public Task Remove(Customer obj)
         {
             throw new NotImplementedException();
         }

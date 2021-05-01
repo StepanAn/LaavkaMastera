@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Лавка Мастера</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="~/ready/layout/css.min.css" />
+    <link rel="stylesheet" href="~/css/tovarlist.css" />
+    <link rel="stylesheet" href="~/css/footer.min.css" />
+    <link rel="stylesheet" href="~/css/details.css" />
+    <link rel="stylesheet" href="~/css/layout2.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="~/ready/layout/jquery.unobtrusive-ajax.min.js"></script>
@@ -49,7 +54,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" asp-action="SearchByName" asp-controller="Search">
+                    <form class="d-flex" asp-action="SearchByName" asp-controller="Search" method="get">
                         <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск" name="name">
                         <button class="btn btn-outline-warning" type="submit">Поиск</button>
                     </form>

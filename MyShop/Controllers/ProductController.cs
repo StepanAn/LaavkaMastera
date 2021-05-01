@@ -7,6 +7,8 @@ using MyShop.ViewModel;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using MyShop.Data;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MyShop.Controllers
 {
@@ -22,10 +24,27 @@ namespace MyShop.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
+            List<CartItem> products = HttpContext.Get<List<CartItem>>("cart");
             if (id != null)
             {
                 Product product;
                 product = await db.Products.GetByIdAsync((int)id);
+                if (products != null)
+                {
+                    CartItem item = products.FirstOrDefault(p => p.TovarInCart.Id == product.Id);
+                    if (item == null)
+                    {
+                        ViewBag.ProductInCart = false;
+                    }
+                    else
+                    {
+                        ViewBag.ProductInCart = true;
+                    }
+                }
+                else
+                {
+                    ViewBag.ProductInCart = false;
+                }
                 return View(product);
             }
             return NotFound();
@@ -121,7 +140,7 @@ namespace MyShop.Controllers
         public async Task<IActionResult> Delete(int productId)
         {
             Product product = await db.Products.GetByIdAsync(productId);
-            await db.Products.RemoveAsync(product);
+            await db.Products.Remove(product);
             return RedirectToAction("Index", "Home");
         }
     }

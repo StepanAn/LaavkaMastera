@@ -3,16 +3,16 @@
     let slideInterval = 8000;
     let sliders;
     sliders = $('#slider-controller').children();
-    $('.kkk').hide('slow', 'linear');
+    $('.kkk').hide(1000, 'linear');
     setInterval(() => {
-        $(sliders[thisSlide]).hide('slow', 'linear');
+        $(sliders[thisSlide]).hide(1000, 'linear');
         if (thisSlide >= sliders.length - 1) {
             thisSlide = 0;
         }
         else {
             ++thisSlide;
         }
-        $(sliders[thisSlide]).show('slow', 'linear');
+        $(sliders[thisSlide]).show(1000, 'linear');
     }, slideInterval);
 
 })

@@ -2,11 +2,11 @@
     --myborder-size: 1em;
     --leftandright-margin: 0.6em;
 }
-.form{
-    width: 30em;
+.form textarea{
+    max-width: 30em;
 }
-.form-name{
-    width: 15em;
+.form-name input{
+    max-width: 15em;
 }
 .comment-contetnt {
     display: inline-block;
@@ -51,13 +51,31 @@
 
 :root{
     --marginTopForLogo:200px;
-    --marginTopForFlowers: 5em;
+    --marginTopForFlowers: 1em;
 
+}
+.pink{
+    margin-left: 85%;
+    width: 6em;
+}
+* {
+    font-family: 'Poiret One', cursive;
+    font-weight: 900 !important;
+}
+.yellow{
+    transform: rotateY(180deg);
+    width: 6em;
+    margin-left: 50%;
+}
+.blue {
+    width: 8em;
+    margin-left: 70%;
+    transform: rotateZ(28deg);
 }
 .buttton {
     display: none;
 }
-.flowers img {
+.cvet {
     width: 90%;
     filter: drop-shadow(.3em .5em 1em #9cbc1c);
 }
@@ -95,7 +113,7 @@
     justify-content: space-around;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 150px;
+/*    margin-top: 150px;*/
 }
 
 .menu-item a {
@@ -210,6 +228,9 @@
 }
 
 @media(max-width: 30em) {
+    .yellow, .pink, .blue{
+        display: none;
+    }
     :root {
         --marginTopForLogo: 5em;
     }

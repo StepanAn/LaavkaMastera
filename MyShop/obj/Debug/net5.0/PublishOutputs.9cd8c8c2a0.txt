@@ -17,14 +17,18 @@ C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\favicon.ico
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\20150508_075935.jpg
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\20151211_115740.png
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\20151215_130851.png
+C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\blue.png
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\DSC_0750.png
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\flowers2.png
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\IMG_0421.jpg
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\interior design — копия.png
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\interior design.png
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\noavatar92.png
+C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\pink.png
+C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\img\yellow.png
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\cart.js
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\comments.js
+C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\details.js
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\lines.es5.js
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\lines.es5.min.js
 C:\MyShop\MyShop\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\lines.js

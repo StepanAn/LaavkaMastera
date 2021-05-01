@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using DataBase;
 using MyShop.Data;
 using System;
+using MyShop.Filters;
 
 namespace MyShop.Controllers
 {
@@ -50,6 +51,11 @@ namespace MyShop.Controllers
             emailService.SendEmail(letter);
 
         }
-
+        [AdminFilter]
+        public async Task<IActionResult> RemoveComment(int id)
+        {
+            await db.Comments.Remove(await db.Comments.GetByIdAsync(id));
+            return RedirectToAction("Index");
+        }
     }
 }

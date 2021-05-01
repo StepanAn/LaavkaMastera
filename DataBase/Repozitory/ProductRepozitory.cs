@@ -40,7 +40,7 @@ namespace DataBase
             return await db.Products.Where(p => p.Name == name).ToListAsync();
         }
 
-        public async Task RemoveAsync(Product obj)
+        public async Task Remove(Product obj)
         {
             db.Products.Remove(obj);
             await db.SaveChangesAsync();

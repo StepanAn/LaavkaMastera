@@ -29,9 +29,10 @@ namespace DataBase
             return await db.Comments.FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public Task RemoveAsync(Comment obj)
+        public async Task Remove(Comment obj)
         {
-            throw new NotImplementedException();
+            db.Comments.Remove(obj);
+            await db.SaveChangesAsync();
         }
 
         public Task Update(Comment obj)

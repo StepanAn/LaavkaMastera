@@ -89,3 +89,4 @@ C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Home\About.cshtml.g.cs
 C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
 C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Product\AddCategory.cshtml.g.cs
 C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Shared\Components\TovarList\Default.cshtml.g.cs
+C:\MyShop\MyShop\obj\Release\net5.0\Razor\Views\Cart\Thanks.cshtml.g.cs

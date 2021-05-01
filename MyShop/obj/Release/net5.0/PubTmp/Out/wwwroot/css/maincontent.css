@@ -2,11 +2,11 @@
     --myborder-size: 1em;
     --leftandright-margin: 0.6em;
 }
-.form{
-    width: 30em;
+.form textarea{
+    max-width: 30em;
 }
-.form-name{
-    width: 15em;
+.form-name input{
+    max-width: 15em;
 }
 .comment-contetnt {
     display: inline-block;

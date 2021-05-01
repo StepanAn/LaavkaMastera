@@ -1,0 +1,212 @@
+﻿:root{
+    --marginTopForLogo:200px;
+    --marginTopForFlowers: 1em;
+
+}
+.pink{
+    margin-left: 85%;
+    width: 6em;
+}
+* {
+    font-family: 'Poiret One', cursive;
+    font-weight: 900 !important;
+}
+.yellow{
+    transform: rotateY(180deg);
+    width: 6em;
+    margin-left: 50%;
+}
+.blue {
+    width: 8em;
+    margin-left: 70%;
+    transform: rotateZ(28deg);
+}
+.buttton {
+    display: none;
+}
+.cvet {
+    width: 90%;
+    filter: drop-shadow(.3em .5em 1em #9cbc1c);
+}
+.flowers{
+    margin-top: var(--marginTopForFlowers);
+}
+
+.logo {
+    margin-left: 100px;
+    width: 100px;
+}
+
+.white {
+    margin: 50px;
+    background: #FFF5F5;
+}
+
+.companyname {
+    margin-top: 50px;
+}
+
+.company {
+    margin-left: auto;
+    margin-right: auto;
+    width: 430px;
+    margin-top: var(--marginTopForLogo);
+    border-bottom: 5px solid #F5E944;
+    border-right: 10px solid #F5E944;
+    padding: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+/*    margin-top: 150px;*/
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: black;
+    font-size: 130%;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+/*.menu-item {
+}
+
+    .menu-item a:hover {
+        text-shadow: 6px 4px 3px rgba(150, 150, 150, 1);
+        color: black;
+        font-size: 135%;
+    }*/
+
+.cart {
+    display: inline;
+}
+
+.allcart {
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search1 {
+    display: inline;
+}
+
+.search2 {
+    display: inline;
+}
+
+.search {
+    margin-left: 150px;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+@media (max-width: 50em) {
+    .company {
+        width: 22em;
+    }
+    :root{
+        --marginTopForLogo: 8em;
+    }
+
+    .companyname img {
+        width: 20em;
+    }
+
+    .logo img {
+        width: 8em;
+    }
+
+    .klukva {
+        display: none;
+    }
+
+    .flex-container {
+        display: block;
+        position: absolute;
+        left: -350px;
+        top: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+        width: 350px;
+        background-color: #F5E944;
+    }
+
+    .menu-item {
+        display: block;
+        margin: 10px;
+    }
+
+    .white {
+        margin: 10px;
+    }
+
+    .buttton {
+        height: 30px;
+        width: 30px;
+        z-index: 10000;
+        display: block;
+    }
+
+    .button span {
+        margin-top: 7px;
+        display: block;
+        height: 3px;
+        width: 30px;
+        background: #0A0000;
+    }
+}
+
+@media(max-width: 30em) {
+    :root {
+        --marginTopForLogo: 5em;
+    }
+
+    .logo img {
+        width: 4em;
+    }
+
+    .companyname img {
+        width: 10em;
+    }
+
+    .company {
+        width: 12em;
+    }
+
+    .logo {
+        margin-left: 2em;
+    }
+
+    .companyname {
+        margin-top: 1em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search {
+        margin-left: 0em;
+    }
+}

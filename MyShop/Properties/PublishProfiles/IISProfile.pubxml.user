@@ -7,27 +7,180 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
-    <History>True|2021-04-05T11:53:42.6771699Z;False|2021-04-05T14:45:33.0073041+03:00;True|2021-04-05T14:32:53.7649541+03:00;True|2021-04-03T19:53:08.8012885+03:00;True|2021-03-31T20:20:59.5147578+03:00;False|2021-03-31T20:13:09.5141842+03:00;True|2021-03-31T19:54:23.2280687+03:00;False|2021-03-31T19:45:47.0319396+03:00;True|2021-03-31T19:23:36.0043151+03:00;False|2021-03-31T19:14:28.3560645+03:00;True|2021-03-31T19:00:18.3063721+03:00;False|2021-03-31T18:50:39.5639115+03:00;False|2021-03-31T18:42:48.4185589+03:00;True|2021-03-31T18:37:22.7091220+03:00;False|2021-03-31T18:24:54.7153189+03:00;True|2021-03-31T18:16:16.8705045+03:00;True|2021-03-24T16:21:38.2131260+03:00;False|2021-03-24T16:00:53.7114636+03:00;True|2021-03-24T15:16:45.8033939+03:00;False|2021-03-24T15:06:24.3665267+03:00;False|2021-03-24T01:45:27.7668403+03:00;False|2021-03-24T01:36:25.4196433+03:00;False|2021-03-24T01:23:02.6478959+03:00;False|2021-03-24T01:22:07.9605186+03:00;</History>
+    <History>True|2021-04-09T02:05:42.1051062Z;False|2021-04-09T04:57:28.3592457+03:00;False|2021-04-09T04:49:43.1798106+03:00;False|2021-04-09T04:48:20.0178841+03:00;True|2021-04-09T02:36:39.9526018+03:00;False|2021-04-09T02:28:07.5239695+03:00;False|2021-04-09T02:21:03.1923981+03:00;False|2021-04-09T02:14:31.2355080+03:00;False|2021-04-09T02:09:29.0753733+03:00;False|2021-04-09T02:09:07.8915181+03:00;False|2021-04-09T02:07:49.5033894+03:00;True|2021-04-09T01:54:32.4139906+03:00;False|2021-04-09T01:45:10.8892383+03:00;False|2021-04-09T01:33:20.2643220+03:00;True|2021-04-09T01:22:26.4793390+03:00;True|2021-04-05T14:53:42.6771699+03:00;False|2021-04-05T14:45:33.0073041+03:00;True|2021-04-05T14:32:53.7649541+03:00;True|2021-04-03T19:53:08.8012885+03:00;True|2021-03-31T20:20:59.5147578+03:00;False|2021-03-31T20:13:09.5141842+03:00;True|2021-03-31T19:54:23.2280687+03:00;False|2021-03-31T19:45:47.0319396+03:00;True|2021-03-31T19:23:36.0043151+03:00;False|2021-03-31T19:14:28.3560645+03:00;True|2021-03-31T19:00:18.3063721+03:00;False|2021-03-31T18:50:39.5639115+03:00;False|2021-03-31T18:42:48.4185589+03:00;True|2021-03-31T18:37:22.7091220+03:00;False|2021-03-31T18:24:54.7153189+03:00;True|2021-03-31T18:16:16.8705045+03:00;True|2021-03-24T16:21:38.2131260+03:00;False|2021-03-24T16:00:53.7114636+03:00;True|2021-03-24T15:16:45.8033939+03:00;False|2021-03-24T15:06:24.3665267+03:00;False|2021-03-24T01:45:27.7668403+03:00;False|2021-03-24T01:36:25.4196433+03:00;False|2021-03-24T01:23:02.6478959+03:00;False|2021-03-24T01:22:07.9605186+03:00;</History>
     <_PublishTargetUrl>ftp://ftp.site4now.net/lavkamastera</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="api-ms-win-core-console-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-console-l1-2-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-datetime-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-debug-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-errorhandling-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-file-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-file-l1-2-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-file-l2-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-handle-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-heap-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-interlocked-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:38</publishTime>
+    </File>
+    <File Include="api-ms-win-core-libraryloader-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-localization-l1-2-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-memory-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:40</publishTime>
+    </File>
+    <File Include="api-ms-win-core-namedpipe-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-processenvironment-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:38</publishTime>
+    </File>
+    <File Include="api-ms-win-core-processthreads-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-processthreads-l1-1-1.dll">
+      <publishTime>12/06/2019 20:29:38</publishTime>
+    </File>
+    <File Include="api-ms-win-core-profile-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-rtlsupport-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:38</publishTime>
+    </File>
+    <File Include="api-ms-win-core-string-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-synch-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:38</publishTime>
+    </File>
+    <File Include="api-ms-win-core-synch-l1-2-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-sysinfo-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-timezone-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-core-util-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:38</publishTime>
+    </File>
+    <File Include="API-MS-Win-core-xstate-l2-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-conio-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-convert-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-environment-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-filesystem-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-heap-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:38</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-locale-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-math-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-multibyte-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-private-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-process-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-runtime-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-stdio-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-string-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-time-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
+    <File Include="api-ms-win-crt-utility-l1-1-0.dll">
+      <publishTime>12/06/2019 20:29:28</publishTime>
+    </File>
     <File Include="appsettings.Development.json">
       <publishTime>03/17/2021 23:03:29</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>03/04/2021 18:06:56</publishTime>
+      <publishTime>04/03/2021 18:06:56</publishTime>
     </File>
     <File Include="appsettings.production.json">
-      <publishTime>04/05/2021 14:47:46</publishTime>
+      <publishTime>04/09/2021 04:58:22</publishTime>
+    </File>
+    <File Include="aspnetcorev2_inprocess.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="BouncyCastle.Crypto.dll">
       <publishTime>02/19/2021 21:04:50</publishTime>
     </File>
+    <File Include="clrcompression.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="clretwrc.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="clrjit.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="coreclr.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="createdump.exe">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
     <File Include="DataBase.dll">
-      <publishTime>03/31/2021 21:09:54</publishTime>
+      <publishTime>04/09/2021 03:22:33</publishTime>
     </File>
     <File Include="DataBase.pdb">
-      <publishTime>03/31/2021 21:09:54</publishTime>
+      <publishTime>04/09/2021 03:22:33</publishTime>
+    </File>
+    <File Include="dbgshim.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="hostfxr.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="hostpolicy.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="libman.json">
       <publishTime>03/17/2021 23:59:11</publishTime>
@@ -35,8 +188,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="MailKit.dll">
       <publishTime>03/16/2021 17:15:52</publishTime>
     </File>
+    <File Include="Microsoft.AspNetCore.Antiforgery.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.Abstractions.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.Cookies.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.Core.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
     <File Include="Microsoft.Data.SqlClient.dll">
       <publishTime>08/25/2020 23:24:48</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.SNI.pdb">
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
       <publishTime>02/18/2021 22:53:02</publishTime>
@@ -72,37 +243,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/18/2019 23:43:40</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.BrowserLink.dll">
-      <publishTime>12/11/2018 17:30:38</publishTime>
+      <publishTime>11/12/2018 17:30:38</publishTime>
     </File>
     <File Include="MimeKit.dll">
-      <publishTime>12/03/2021 22:18:36</publishTime>
+      <publishTime>03/12/2021 22:18:36</publishTime>
     </File>
     <File Include="Models.dll">
-      <publishTime>03/31/2021 20:06:02</publishTime>
+      <publishTime>04/09/2021 02:28:48</publishTime>
     </File>
     <File Include="Models.pdb">
-      <publishTime>03/31/2021 20:06:02</publishTime>
+      <publishTime>04/09/2021 02:28:48</publishTime>
     </File>
     <File Include="MyShop.deps.json">
-      <publishTime>04/05/2021 14:47:34</publishTime>
+      <publishTime>04/09/2021 04:58:22</publishTime>
     </File>
     <File Include="MyShop.dll">
-      <publishTime>04/05/2021 14:47:34</publishTime>
+      <publishTime>04/09/2021 04:58:21</publishTime>
     </File>
     <File Include="MyShop.exe">
-      <publishTime>04/05/2021 14:47:34</publishTime>
+      <publishTime>04/09/2021 04:58:21</publishTime>
     </File>
     <File Include="MyShop.pdb">
-      <publishTime>04/05/2021 14:47:34</publishTime>
+      <publishTime>04/09/2021 04:58:21</publishTime>
     </File>
     <File Include="MyShop.runtimeconfig.json">
       <publishTime>03/31/2021 20:03:38</publishTime>
     </File>
     <File Include="MyShop.Views.dll">
-      <publishTime>04/05/2021 14:47:34</publishTime>
+      <publishTime>04/09/2021 04:58:22</publishTime>
     </File>
     <File Include="MyShop.Views.pdb">
-      <publishTime>04/05/2021 14:47:34</publishTime>
+      <publishTime>04/09/2021 04:58:22</publishTime>
     </File>
     <File Include="Newtonsoft.Json.dll">
       <publishTime>03/20/2017 20:03:18</publishTime>
@@ -159,10 +330,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2019 08:37:42</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>04/05/2021 14:47:46</publishTime>
+      <publishTime>04/09/2021 04:58:22</publishTime>
     </File>
     <File Include="wwwroot/css/details.css">
-      <publishTime>03/04/2021 18:39:20</publishTime>
+      <publishTime>04/03/2021 18:39:20</publishTime>
     </File>
     <File Include="wwwroot/css/details.min.css">
       <publishTime>03/23/2021 18:24:23</publishTime>
@@ -174,22 +345,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/18/2021 14:14:23</publishTime>
     </File>
     <File Include="wwwroot/css/header.css">
-      <publishTime>03/29/2021 22:09:08</publishTime>
+      <publishTime>04/09/2021 04:45:21</publishTime>
     </File>
     <File Include="wwwroot/css/layout2.css">
-      <publishTime>03/04/2021 18:52:37</publishTime>
+      <publishTime>04/09/2021 04:43:51</publishTime>
     </File>
     <File Include="wwwroot/css/layout2.min.css">
-      <publishTime>03/04/2021 18:52:37</publishTime>
+      <publishTime>04/09/2021 04:43:51</publishTime>
     </File>
     <File Include="wwwroot/css/maincontent.css">
-      <publishTime>02/04/2021 01:36:07</publishTime>
+      <publishTime>04/02/2021 01:36:07</publishTime>
     </File>
     <File Include="wwwroot/css/min.bundle/bundle.css">
-      <publishTime>02/04/2021 01:36:08</publishTime>
+      <publishTime>04/09/2021 04:45:22</publishTime>
     </File>
     <File Include="wwwroot/css/min.bundle/bundle.min.css">
-      <publishTime>02/04/2021 01:36:08</publishTime>
+      <publishTime>04/09/2021 04:45:22</publishTime>
     </File>
     <File Include="wwwroot/css/payment.css">
       <publishTime>03/30/2021 18:12:36</publishTime>
@@ -201,7 +372,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/30/2021 02:37:26</publishTime>
     </File>
     <File Include="wwwroot/css/tovarlist.css">
-      <publishTime>03/04/2021 18:11:50</publishTime>
+      <publishTime>04/03/2021 18:11:50</publishTime>
     </File>
     <File Include="wwwroot/favicon.ico">
       <publishTime>04/05/2021 14:17:37</publishTime>
@@ -210,16 +381,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="wwwroot/img/15. Облака.jpg">
-      <publishTime>03/31/2021 18:03:47</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="wwwroot/img/20150508_075935.jpg">
-      <publishTime>01/04/2021 17:24:51</publishTime>
+      <publishTime>04/01/2021 17:24:51</publishTime>
     </File>
     <File Include="wwwroot/img/20151211_115740.png">
       <publishTime>03/30/2021 01:40:30</publishTime>
     </File>
     <File Include="wwwroot/img/20151215_130851.png">
       <publishTime>03/30/2021 01:27:02</publishTime>
+    </File>
+    <File Include="wwwroot/img/blue.png">
+      <publishTime>04/08/2021 23:56:18</publishTime>
     </File>
     <File Include="wwwroot/img/DSC_0750.png">
       <publishTime>03/30/2021 01:26:50</publishTime>
@@ -239,11 +413,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="wwwroot/img/noavatar92.png">
       <publishTime>03/24/2021 18:36:06</publishTime>
     </File>
+    <File Include="wwwroot/img/pink.png">
+      <publishTime>04/09/2021 00:22:48</publishTime>
+    </File>
+    <File Include="wwwroot/img/yellow.png">
+      <publishTime>04/08/2021 23:56:08</publishTime>
+    </File>
     <File Include="wwwroot/js/cart.js">
-      <publishTime>03/04/2021 19:41:21</publishTime>
+      <publishTime>04/06/2021 18:23:26</publishTime>
     </File>
     <File Include="wwwroot/js/comments.js">
-      <publishTime>03/04/2021 01:17:51</publishTime>
+      <publishTime>04/03/2021 01:17:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/details.js">
+      <publishTime>04/09/2021 04:05:20</publishTime>
     </File>
     <File Include="wwwroot/js/lines.es5.js">
       <publishTime>03/30/2021 17:54:03</publishTime>
@@ -264,10 +447,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/17/2021 23:59:12</publishTime>
     </File>
     <File Include="wwwroot/js/min.bundle/bundle.js">
-      <publishTime>03/04/2021 19:41:21</publishTime>
+      <publishTime>04/06/2021 18:23:27</publishTime>
     </File>
     <File Include="wwwroot/js/min.bundle/bundle.min.js">
-      <publishTime>03/04/2021 19:41:21</publishTime>
+      <publishTime>04/03/2021 19:41:21</publishTime>
     </File>
     <File Include="wwwroot/js/slider.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -414,25 +597,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="wwwroot/ready/index/css.css">
-      <publishTime>03/04/2021 18:11:50</publishTime>
+      <publishTime>04/03/2021 18:11:50</publishTime>
     </File>
     <File Include="wwwroot/ready/index/css.min.css">
-      <publishTime>03/04/2021 18:11:51</publishTime>
+      <publishTime>04/03/2021 18:11:51</publishTime>
     </File>
     <File Include="wwwroot/ready/layout/css.css">
-      <publishTime>02/04/2021 00:51:16</publishTime>
+      <publishTime>04/02/2021 00:51:16</publishTime>
     </File>
     <File Include="wwwroot/ready/layout/css.min.css">
-      <publishTime>02/04/2021 00:51:16</publishTime>
+      <publishTime>04/02/2021 00:51:16</publishTime>
     </File>
     <File Include="wwwroot/ready/layout/jquery.unobtrusive-ajax.min.js">
       <publishTime>03/25/2021 18:01:56</publishTime>
     </File>
     <File Include="wwwroot/ready/layout/js.js">
-      <publishTime>03/04/2021 19:41:21</publishTime>
+      <publishTime>04/06/2021 18:23:27</publishTime>
     </File>
     <File Include="wwwroot/ready/layout/js.min.js">
-      <publishTime>03/04/2021 19:41:21</publishTime>
+      <publishTime>04/03/2021 19:41:21</publishTime>
     </File>
   </ItemGroup>
   <ItemGroup>
@@ -440,15 +623,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=MyShop%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
     </DestinationConnectionStrings>
     <DestinationConnectionStrings Include="myshop">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=MyShop%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
-    </DestinationConnectionStrings>
-    <DestinationConnectionStrings Include="Server=(localdb)\mssqllocaldb">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=MyShop%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
-    </DestinationConnectionStrings>
-    <DestinationConnectionStrings Include="Database=MyShop">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=MyShop%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
-    </DestinationConnectionStrings>
-    <DestinationConnectionStrings Include="Trusted_Connection=True">
       <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=MyShop%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
     </DestinationConnectionStrings>
   </ItemGroup>

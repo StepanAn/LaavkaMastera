@@ -8,7 +8,7 @@ namespace DataBase
         Task<List<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
         Task Update(T obj);
-        Task RemoveAsync(T obj);
+        Task Remove(T obj);
         Task AddAsync(T obj);
     }
 }

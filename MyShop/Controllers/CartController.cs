@@ -133,6 +133,7 @@ namespace MyShop.Controllers
             CookieOptions option = new();
             option.Expires = DateTime.Now.AddHours(10000);
             string cart = JsonSerializer.Serialize<List<CartItem>>(items);
+            Response.Cookies.Delete(сartKey);
             Response.Cookies.Append(сartKey, cart, option);
         }
         [HttpGet]
